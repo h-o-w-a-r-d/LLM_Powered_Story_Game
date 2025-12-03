@@ -20,7 +20,7 @@ const Game = {
     currentLocationData: null, 
 
     init: () => {
-        Game.worker = new Worker('../static/js/map_worker.js');
+        Game.worker = new Worker('./map_worker.js');
         Game.worker.onerror = (e) => {
             console.error("Worker Error:", e);
             UI.log("系統", "地圖核心啟動失敗", "system");
@@ -554,3 +554,4 @@ const Game = {
     }
 
 };
+
